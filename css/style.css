@@ -1,0 +1,98 @@
+:root{
+    --backgrond-color: rgb(244,10,123);
+    --text-color: rgb(255,255,255);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--backgrond-color);
+    font-family: 'Lato', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    text-align: center;
+    text-shadow: 8px 3px 1.5px rgba(14, 116, 48, 0.582);
+}
+
+.container{
+    max-width: 850px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+.btn{
+    background-color:forestgreen; 
+    color: black;
+    display: block;
+    color: var(--text-color);
+    text-decoration: none;
+    opacity: 0;
+    border: 2px solid var(--text-color);
+    padding: 1rem;
+    margin: 5%;
+    animation-name: btnAnim;
+    animation-duration: 4s; 
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    transition-duration: 6s;
+}
+
+.btn:hover{
+    transform: rotate(180deg);
+}
+
+#carpeDiem{
+    height: 300px;
+}
+
+#carpeDiem h1{
+    font-size: 4rem;
+    line-height: 1.2;
+    position: relative;
+    animation-name: carpeDiem;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+#content{
+    position: relative;
+    animation-name: contentAnim;
+    animation-duration: 6s;
+    animation-fill-mode: forwards; 
+
+}
+
+
+
+@keyframes carpeDiem{
+    0% {
+        top: -80px;
+    }
+
+    100%{
+        top: 200px;
+    }
+}
+
+@keyframes contentAnim{
+    0% {
+        left: -1000px; 
+    }
+
+    100%{
+        left: 0px;
+    }
+}
+
+@keyframes btnAnim{
+    0% {
+    opacity: 0;
+    }
+    100%{
+    opacity: 1;
+    }   
+}
+
